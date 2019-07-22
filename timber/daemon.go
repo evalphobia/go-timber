@@ -51,7 +51,7 @@ func (d *Daemon) Flush() {
 	var logs []*logPayload
 	logs, d.spool = shiftLogs(d.spool, d.checkpointSize)
 	d.spoolMu.Unlock()
-	d.flushLogs(logs)
+	_ = d.flushLogs(logs)
 }
 
 // shiftLogs retrieves logs.

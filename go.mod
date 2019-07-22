@@ -3,7 +3,7 @@ module github.com/evalphobia/go-timber
 go 1.12
 
 require (
-	github.com/evalphobia/httpwrapper v0.1.3-0.20190719103445-373dc9b457fe
+	github.com/evalphobia/httpwrapper v0.2.0
 	github.com/nbio/st v0.0.0-20140626010706-e9e8d9816f32 // indirect
 	github.com/stretchr/testify v1.3.0 // indirect
 	golang.org/x/net v0.0.0-20190628185345-da137c7871d7 // indirect
