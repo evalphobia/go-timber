@@ -69,11 +69,16 @@ func (c *Client) EmitWithLevel(level, line string, opt ...map[string]interface{}
 	if !isMoreLevel(c.MinimumLevel, level) {
 		return nil
 	}
+
+	d := LogData{
+		Message: line,
+		Level:   level,
+	}
 	if len(opt) != 0 {
-		opt[0]["level"] = level
+		d.Extra = opt[0]
 	}
 
-	return c.Emit(line, opt...)
+	return c.emit(d)
 }
 
 // Emit sends a log.
